@@ -1,0 +1,5 @@
+include(GoogleTest)
+add_executable(memory_manager_test memoryManagerTests.cpp)
+include_directories(${CMAKE_BINARY_DIR} ${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR})
+target_link_libraries(memory_manager_test gtest gtest_main memory_manager)
+gtest_add_tests(TARGET memory_manager_test AUTO)
